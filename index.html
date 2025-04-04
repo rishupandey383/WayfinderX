@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel agency | WayfinderX.</title>
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="style.css">
+
+    <!--=============== BOXICONS ===============-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.4/css/boxicons.min.css" />
+
+    <!--=============== FONT AWESOME ICONS ===============-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+
+    <!--=============== OWL CAROUSEL ===============-->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+
+    <!--=============== LIGHT GALLERY ===============-->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css" />
+
+    <!--=============== AOS ===============-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+</head>
+
+<body>
+
+    <!--==================== HEADER ====================-->
+    <header class="header" id="header">
+        
+        <!-- NAVBAR -->
+        <div id="nav__wrapper" class="nav__wrapper">
+            <nav class="nav">
+                <a href="#" class="nav__logo">
+                    <img src="image/d1a23d08278fd40b043c6bf609808218.png" alt="WayfinderX Logo" class="nav__logo-gif">
+                    <span class="way">WayfinderX</span>
+                </a>
+                
+
+                <!-- NAV MENU -->
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item ">
+                            <a href="#home" class="nav__link active">Home</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#destinations" class="nav__link">Destinations</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#tours" class="nav__link">Tour</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#gallery" class="nav__link">Gallery</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#blogs" class="nav__link">Blogs</a>
+                        </li>
+                        </li>
+                        <li class="nav__item">
+                        <a href="Train.html" class="nav__link">By Train</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="login_signup.html" class="nav__link">Login</a>
+                        </li>
+                    </ul>
+
+                    <!-- NAV CLOSE -->
+                    <div class="nav__close" id="nav-close">
+                        <i class="bx bx-x"></i>
+                    </div>
+
+                </div>
+
+                <!-- SEARCH ICON -->
+                <div class="nav__search" id="nav-search">
+                    <i class="bx bx-search"></i>
+                </div>
+                <!-- NAV TOGGLE -->
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="bx bx-menu"></i>
+                </div>
+            </nav>
+        </div>
+
+    </header>
+    <!--==================== HEADER END ====================-->
+
+
+    <!--==================== SEARCH BAR ====================-->
+    <div id="search-bar" class="search__bar__wrapper">
+        <form class="search__bar">
+            <input type="text" placeholder="Search..." required>
+            <button type="submit" class="search__submit bx bx-search"></button>
+            <i id="search-close" class="search__close bx bx-x"></i>
+        </form>
+    </div>
+
+
+    <!--==================== HOME ====================-->
+    <section id="home">
+
+        <div class="wrapper">
+
+            <!-- HOME CAROUSEL -->
+            <div id="home-carousel" class="home-carousel owl-carousel owl-theme">
+
+                <!--====================== Slide 1 ======================-->
+                <div class="home__slide slide__1">
+                    <div class="overlay"></div>
+                    <div class="home__slide__content">
+                        <h1 class="heading__text">Himalayas</h1>
+                        <p class="home__slide__desc">
+                            Let's find the best travel destination for you
+                        </p>
+                        <div>
+                            <a href="personal-tour.html">
+  <button class="btn btn__1">Want a personal tour</button>
+</a>
+
+                            <a href="tour.html">
+                                <button class="btn btn__2 light">Choose tour</button>
+                              </a>
+                            
+                            <button class="carousel__next__btn carousel__btn light" data-target="#home-carousel">
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!--====================== Slide 2 ======================-->
+                <div class="home__slide slide__2">
+                    <div class="overlay"></div>
+                    <div class="home__slide__content">
+                        <h1 class="heading__text">Taj Mahal , India</h1>
+                        <p class="home__slide__desc">
+                            Let's find the best travel destination for you
+                        </p>
+                        <div>
+                            <button class="btn btn__1">Want a personal tour</button>
+                            <button class="btn btn__2 light">Choose tour</button>
+                            <button class="carousel__next__btn carousel__btn light" data-target="#home-carousel">
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!--====================== Slide 3 ======================-->
+                <div class="home__slide slide__3">
+                    <div class="overlay"></div>
+                    <div class="home__slide__content">
+                        <h1 class="heading__text">Kashmir , India</h1>
+                        <p class="home__slide__desc">
+                            Let's find the best travel destination for you
+                        </p>
+                        <div>
+                            <button class="btn btn__1">Want a personal tour</button>
+                            <button class="btn btn__2 light">Choose tour</button>
+                            <button class="carousel__next__btn carousel__btn light" data-target="#home-carousel">
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+
+        <!-- Home Destination Card -->
+        <div class="best__destination" data-aos="fade-right" data-aos-duration="2000" data-aos-anchor-placement="center-bottom" data-aos-delay="2000">
+            <i class="bx bxs-map"></i>
+            <p>The most popular destination this year - India
+            </p>
+        </div>
+
+    </section>
+    <!--==================== HOME END ====================-->
+
+
+    <!--==================== DESTINATIONS ====================-->
+    <section id="destinations" class="section__padding">
+        <div class="wrapper">
+
+            <!-- SECTION TOP -->
+            <div class="section__top">
+                <div class="section__heading">
+                    <p class="section__subtitle">Popularly</p>
+                    <h2 class="section__title light">Most popular<br>holiday destinations</h2>
+                </div>
+
+                <!-- Buttons -->
+                <div class="button__wrapper">
+                    <div class="carousel__buttons">
+                        <div class="carousel__prev__btn carousel__btn light" data-target="#destination-carousel">
+                            <i class="fa-solid fa-arrow-left"></i>
+                        </div>
+                        <div class="carousel__next__btn carousel__btn light" data-target="#destination-carousel">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                    </div>
+                    <button class="btn btn__2 light">View all tours</button>
+                </div>
+            </div>
+
+            <!-- Destination Carousel -->
+            <div id="destination-carousel" class="destination-carousel owl-carousel owl-theme" data-aos="fade-right" data-aos-duration="1000" >
+
+                <!--==================== DESTINATION SLIDE 1 ===================-->
+                <div class="destination__slide">
+                    <div class="overlay"></div>
+                    <img src="image/pexels-umernazir-10538883.jpg" alt="dest-img-1">
+                    <div class="tag__list">
+                        <div class="tags discount">20% off</div>
+                        <div class="tags new">new</div>
+                    </div>
+                    <div class="content">
+                        <div class="rating">
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star inactive"></i>
+                            <span>(2 Reviews)</span>
+                        </div>
+                        <h3 class="title">Autumn in Kashmir | Rs.15,000 Rs.15,550</h3>
+                        <p class="description">
+                            Admire the breathtaking Chinar gardens, sail on Dal Lake, and witness nature’s vibrant autumn palette.
+                        </p>
+                        <div class="time">
+                            <i class="fa-regular fa-clock clock"></i>
+                            <span class="days">7 days</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!--==================== DESTINATION SLIDE 2 ===================-->
+                <div class="destination__slide">
+                    <div class="overlay"></div>
+                    <img src="image/pexels-yashchoudhary-30854355.jpg" alt="dest-img-2">
+                    <div class="tag__list">
+                        <div class="tags discount">20% off</div>
+                    </div>
+                    <div class="content">
+                        <div class="rating">
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star inactive"></i>
+                            <span>(2 Reviews)</span>
+                        </div>
+                        <h3 class="title">Banaras</h3>
+                        <p class="description">
+                            Experience the divine Ganga Aarti, stroll through ancient ghats, and soak in the golden autumn aura.
+                        </p>
+                        <div class="time">
+                            <i class="fa-regular fa-clock clock"></i>
+                            <span class="days">7 days</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!--==================== DESTINATION SLIDE 3 ===================-->
+                <div class="destination__slide">
+                    <div class="overlay"></div>
+                    <img src="image/pexels.jpg" alt="dest-img-3">
+                    <div class="tag__list">
+                        <div class="tags discount">20% off</div>
+                    </div>
+                    <div class="content">
+                        <div class="rating">
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star inactive"></i>
+                            <span>(2 Reviews)</span>
+                        </div>
+                        <h3 class="title">Kolkata | Rs.15,000 Rs.15,550</h3>
+                        <p class="description">
+                            Witness the iconic landmark glowing under the autumn sky, a perfect blend of history and modernity.
+                        </p>
+                        <div class="time">
+                            <i class="fa-regular fa-clock clock"></i>
+                            <span class="days">7 days</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!--==================== DESTINATION SLIDE 4 ===================-->
+                <div class="destination__slide">
+                    <div class="overlay"></div>
+                    <img src="image/pexels-wanderinglenses-20813018.jpg" alt="dest-img-4">
+                    <div class="tag__list">
+                    </div>
+                    <div class="content">
+                        <div class="rating">
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star inactive"></i>
+                            <span>(2 Reviews)</span>
+                        </div>
+                        <h3 class="title">Autumn in Kashmir | Rs.15,000 Rs.15,550</h3>
+                        <p class="description">
+                            Admire the breathtaking Chinar gardens, sail on Dal Lake, and witness nature’s vibrant autumn palette.
+                        </p>
+                        <div class="time">
+                            <i class="fa-regular fa-clock clock"></i>
+                            <span class="days">7 days</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!--==================== DESTINATION SLIDE 5 ===================-->
+                <div class="destination__slide">
+                    <div class="overlay"></div>
+                    <img src="image/pexels-uwc12-574313.jpg" alt="dest-img-5">
+                    <div class="tag__list">
+                        <div class="tags new">new</div>
+                    </div>
+                    <div class="content">
+                        <div class="rating">
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star inactive"></i>
+                            <span>(2 Reviews)</span>
+                        </div>
+                        <h3 class="title">Punjab</h3>
+                        <p class="description">
+                            Amritsar & Golden Temple – A spiritual glow in autumn’s serenity.
+ Wagah Border & Rural Punjab – Culture, history, and scenic mustard fields.
+                        </p>
+                        <div class="time">
+                            <i class="fa-regular fa-clock clock"></i>
+                            <span class="days">7 days</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!--==================== DESTINATIONS END ====================-->
+
+
+    <!--==================== SEARCH BOX ====================-->
+    <section class="search__tour">
+
+        <div class="search__tour__wrapper"  data-aos="fade-up" data-aos-duration="1000" >
+
+            <!-- SECTION HEADING -->
+            <div class="section__heading">
+                <p class="section__subtitle">Search Tour</p>
+                <h2 class="section__title dark">
+                    Ready to rest? We are ready to help with the search
+                </h2>
+            </div>
+
+            <!-- SEARCH FORM -->
+            <form action="#" class="feilds">
+                <div class="feild__item">
+                    <label for="destination" class="feild__label">Destination</label>
+                    <div class="feild__input">
+                        <input type="text" placeholder="Where to?" required>
+                        <i class="bx bx-search"></i>
+                    </div>
+                </div>
+                <div class="feild__item">
+                    <label for="date" class="feild__label">Date</label>
+                    <div class="feild__input">
+                        <input type="date" required>
+                    </div>
+                </div>
+                <div class="feild__item">
+                    <label for="persons" class="feild__label">Persons</label>
+                    <div class="feild__input">
+                        <input type="text" placeholder="1 Person" required>
+                        <i class="bx bx-user"></i>
+                    </div>
+                </div>
+                <div class="feild__item">
+                    <label for="travel" class="feild__label">Travel Type</label>
+                    <div class="feild__select">
+                        <select name="Travel Type">
+                            <option value="city">City Tour</option>
+                            <option value="city">Adventure</option>
+                            <option value="city">Seasonal Tour</option>
+                            <option value="city">Hike</option>
+                            <option value="city">Wildlife</option>
+                            <option value="city">Cultural Tour</option>
+                            <option value="city">Other</option>
+                        </select>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn__1">
+                    <i class="bx bx-search"></i>
+                </button>
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <!--==================== TOURS ====================-->
+    <section id="tours" class="section__padding">
+
+        <div class="wrapper">
+
+            <!-- SECTION TOP -->
+            <div class="section__top">
+                <div class="section__heading">
+                    <p class="section__subtitle">Packages</p>
+                    <h2 class="section__title dark">Our Best Tour Packages</h2>
+                </div>
+
+                <!-- Buttons -->
+                <div class="button__wrapper">
+                    <div class="carousel__buttons">
+                        <div class="carousel__prev__btn carousel__btn dark" data-target="#tour-carousel">
+                            <i class="fa-solid fa-arrow-left"></i>
+                        </div>
+                        <div class="carousel__next__btn carousel__btn dark" data-target="#tour-carousel">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                    </div>
+                    <button class="btn btn__2 dark">View all tours</button>
+                </div>
+            </div>
+
+            <!-- Tour Carousel -->
+            <div id="tour-carousel" class="tour-carousel owl-carousel owl-theme"  data-aos="fade-right" data-aos-duration="1000" >
+
+                <!--==================== TOUR ITEM 1 ====================-->
+                <div class="tour__item">
+                    <div class="img__box">
+                        <img src="image/tourist-carrying-luggage.jpg" alt="#">
+                    </div>
+                    <div class="tour__item__content">
+                        <div class="tour__details">
+                            <a href="#" class="tour__name">Golden Triangle Tour (Classic India)
+                            </a>
+                            <div class="rating">5.0 <i class="bx bxs-star"></i></div>
+                        </div>
+                        <p class="desc">Destinations: Delhi, Agra, Jaipur
+                            Highlights:
+                            
+                            Explore India's rich history and architecture.
+                            
+                            Visit the Taj Mahal, Amber Fort, Qutub Minar, and Hawa Mahal.
+                            
+                            Experience local culture, cuisine, and shopping in bustling markets.
+                            
+                            Target Audience: First-time visitors, history buffs, and cultural explorers.</p>
+                        <div class="tour__details">
+                            <div class="location">
+                                <i class="bx bxs-map"></i>
+                                <p>Delhi</p>
+                            </div>
+                            <div class="price">
+                                <i class="bx bx-rupee"></i>
+                                <p>15000 <span>/ package</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--==================== TOUR ITEM 2 ====================-->
+                <div class="tour__item">
+                    <div class="img__box">
+                        <img src="image/hawaii-beach-landscape-with-nature-coastline.jpg" alt="#">
+                    </div>
+                    <div class="tour__item__content">
+                        <div class="tour__details">
+                            <a href="#" class="tour__name">Kerala Backwaters and Beaches (Serene South India)
+                                /a>
+                            <div class="rating">4.9 <i class="bx bxs-star"></i></div>
+                        </div>
+                        <p class="desc">Destinations: Kochi, Alleppey, Munnar, Kovalam
+
+                            Highlights:
+                            
+                            Houseboat stay in Alleppey's backwaters.
+                            
+                            Tea plantation tours in Munnar.
+                            
+                            Relax on Kovalam's pristine beaches.
+                            
+                            Ayurvedic spa and wellness experiences.
+                            
+                            Target Audience: Couples, families, and wellness travelers.</p>
+                        <div class="tour__details">
+                            <div class="location">
+                                <i class="bx bxs-map"></i>
+                                <p>Kerala</p>
+                            </div>
+                            <div class="price">
+                                <i class="bx bx-rupee"></i>
+                                <p>18000 <span>/ package</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--==================== TOUR ITEM 3 ====================-->
+                <div class="tour__item">
+                    <div class="img__box">
+                        <img src="image/horizontal-shot-group-people-hiking-mountains-covered-snow-cloudy-sky.jpg" alt="#">
+                    </div>
+                    <div class="tour__item__content">
+                        <div class="tour__details">
+                            <a href="#" class="tour__name">Himalayan Adventure (North India)
+                            </a>
+                            <div class="rating">5.0 <i class="bx bxs-star"></i></div>
+                        </div>
+                        <p class="desc">Destinations: Manali, Leh-Ladakh, Rishikesh, Shimla
+                            Highlights:
+                            
+                            Trekking, paragliding, and river rafting in Rishikesh.
+                            
+                            Scenic road trips and monasteries in Leh-Ladakh.
+                            
+                            Snow-capped mountains and adventure sports in Manali.
+                            
+                            Colonial charm in Shimla.
+                            
+                            Target Audience: Adventure seekers, solo travelers, and nature lovers.
+                            
+                            </p>
+                        <div class="tour__details">
+                            <div class="location">
+                                <i class="bx bxs-map"></i>
+                                <p>Himalayan</p>
+                            </div>
+                            <div class="price">
+                                <i class="bx bx-rupee"></i>
+                                <p>15000 <span>/ package</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--==================== TOUR ITEM 4 ====================-->
+                <div class="tour__item">
+                    <div class="img__box">
+                        <img src="image/indian-men-resting-by-bonfire-with-their-camel.jpg" alt="#">
+                    </div>
+                    <div class="tour__item__content">
+                        <div class="tour__details">
+                            <a href="#" class="tour__name">Rajasthan Royal Experience (Cultural Extravaganza)</a>
+                            <div class="rating">4.9 <i class="bx bxs-star"></i></div>
+                        </div>
+                        <p class="desc">Destinations: Udaipur, Jodhpur, Jaisalmer, Pushkar
+                            Highlights:
+                            
+                            Stay in heritage palaces and havelis.
+                            
+                            Camel safaris in the Thar Desert.
+                            
+                            Attend the Pushkar Camel Fair (if timed right).
+                            
+                            Explore vibrant forts, lakes, and temples.
+                            
+                            Target Audience: Culture enthusiasts, photographers, and luxury travelers.</p>
+                        <div class="tour__details">
+                            <div class="location">
+                                <i class="bx bxs-map"></i>
+                                <p>Rajasthan</p>
+                            </div>
+                            <div class="price">
+                                <i class="bx bx-rupee"></i>
+                                <p>22000 <span>/ package</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--==================== TOUR ITEM 5 ====================-->
+                <div class="tour__item">
+                    <div class="img__box">
+                        <img src="image/woman-sitting-lotus-position-morning-fresh-air.jpg" alt="#">
+                    </div>
+                    <div class="tour__item__content">
+                        <div class="tour__details">
+                            <a href="#" class="tour__name">Spiritual and Yoga Retreat (Inner Peace)</a>
+                            <div class="rating">5.0 <i class="bx bxs-star"></i></div>
+                        </div>
+                        <p class="desc">Destinations: Rishikesh, Varanasi, Haridwar, Amritsar
+                            Highlights:
+                            
+                            Yoga and meditation sessions in Rishikesh (Yoga Capital of the World).
+                            
+                            Witness the Ganga Aarti in Varanasi and Haridwar.
+                            
+                            Visit the Golden Temple in Amritsar.
+                            
+                            Explore spiritual teachings and ancient rituals.
+                            
+                            Target Audience: Spiritual seekers, yoga enthusiasts, and wellness travelers.</p>
+                        <div class="tour__details">
+                            <div class="location">
+                                <i class="bx bxs-map"></i>
+                                <p>India</p>
+                            </div>
+                            <div class="price">
+                                <i class="bx bx-rupee"></i>
+                                <p>15000 <span>/ package</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--==================== TOUR ITEM 6 ====================-->
+                <div class="tour__item">
+                    <div class="img__box">
+                        <img src="image/group-elephants-big-green-tree-wilderness.jpg" alt="#">
+                    </div>
+                    <div class="tour__item__content">
+                        <div class="tour__details">
+                            <a href="#" class="tour__name"> Wildlife and Jungle Safari (Nature Lovers)</a>
+                            <div class="rating">5.0 <i class="bx bxs-star"></i></div>
+                        </div>
+                        <p class="desc">Destinations: Ranthambore, Jim Corbett, Kaziranga, Bandhavgarh
+                            Highlights:
+                            
+                            Spot tigers, elephants, and other wildlife in national parks.
+                            
+                            Stay in jungle lodges and eco-resorts.
+                            
+                            Birdwatching and nature walks.
+                            
+                            Target Audience: Wildlife enthusiasts, families, and photographers.</p>
+                        <div class="tour__details">
+                            <div class="location">
+                                <i class="bx bxs-map"></i>
+                                <p>India</p>
+                            </div>
+                            <div class="price">
+                                <i class="bx bx-rupee"></i>
+                                <p>20500<span>/ package</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <!--==================== TOUR END ====================-->
+
+
+
+    <!--==================== GALLERY ====================-->
+    <section id="gallery" class="section__padding">
+        <div class="wrapper"  data-aos="fade-up" data-aos-duration="1000">
+            <div class="section__top">
+
+                <!-- SECTION HEADING -->
+                <div class="section__heading">
+                    <p class="section__subtitle">GALLERY</p>
+                    <h2 class="section__title light">Photo's from travellers</h2>
+                </div>
+
+            </div>
+
+            <div class="gallery__wrapper section__content">
+
+                <!--========== GALLERY ITEM 1 ============-->
+                <a href="image/pexels-kolkatarchobiwala-31149152.jpg" class="gallery__item gallery__item__1">
+                    <img src="image/pexels-kolkatarchobiwala-31149152.jpg" alt="#">
+                    <div class="icon">
+                        <i class="bx bx-search"></i>
+                    </div>
+                </a>
+
+                <!--========== GALLERY ITEM 2 ============-->
+                <a href="image/pexels-nishanth-a-312589361-31166218.jpg" class="gallery__item gallery__item__2">
+                    <img src="image/pexels-nishanth-a-312589361-31166218.jpg" alt="#">
+                    <div class="icon">
+                        <i class="bx bx-search"></i>
+                    </div>
+                </a>
+
+                <!--========== GALLERY ITEM 3 ============-->
+                <a href="image/pexels-ethan-sarkar-2060961318-31075807.jpg" class="gallery__item gallery__item__3">
+                    <img src="image/pexels-ethan-sarkar-2060961318-31075807.jpg" alt="#">
+                    <div class="icon">
+                        <i class="bx bx-search"></i>
+                    </div>
+                </a>
+
+                <!--========== GALLERY ITEM 4 ============-->
+                <a href="image/pexels-rushikesh-patil-2150450771-31143502.jpg" class="gallery__item gallery__item__4">
+                    <img src="image/pexels-rushikesh-patil-2150450771-31143502.jpg" alt="#">
+                    <div class="icon">
+                        <i class="bx bx-search"></i>
+                    </div>
+                </a>
+
+                <!--========== GALLERY ITEM 5 ============-->
+                <a href="image/pexels-roman-saienko-1867764487-31158712.jpg" class="gallery__item gallery__item__5">
+                    <img src="image/pexels-roman-saienko-1867764487-31158712.jpg" alt="#">
+                    <div class="icon">
+                        <i class="bx bx-search"></i>
+                    </div>
+                </a>
+
+                <!--========== GALLERY ITEM 6 ============-->
+                <a href="image/pexels-sheikh-basharat-33843080-31166127.jpg" class="gallery__item gallery__item__6">
+                    <img src="image/pexels-sheikh-basharat-33843080-31166127.jpg" alt="#">
+                    <div class="icon">
+                        <i class="bx bx-search"></i>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!--==================== GALLERY END ====================-->
+
+
+    <!--==================== BLOGS ====================-->
+    <section id="blogs" class="section__padding">
+        <div class="wrapper">
+            <div class="section__top">
+                <!-- SECTION HEADING -->
+                <div class="section__heading text__center">
+                    <p class="section__subtitle">BLOGS</p>
+                    <h2 class="section__title light">Travel Articles</h2>
+                    <p class="section__text">
+                        Explore India's wonders with us! From the Taj Mahal to Kerala's backwaters, 
+                        Himalayan peaks to Rajasthan's vibrant festivals, uncover hidden gems, rich cultures, 
+                        and unforgettable experiences. Your journey through Incredible India starts here!
+                    </p>
+                </div>
+            </div>
+
+            <div class="section__content">
+                <div class="blog__item__wrapper">
+
+                    <!--==================== BLOG ITEM 1 ====================-->
+                    <a href="#" class="blog__item"  data-aos="zoom-in" data-aos-anchor-placement="center-bottom" data-aos-duration="1000">
+                        <article>
+                            <div class="blog__img">
+                                <img src="image/pexels-pawan-yadav-1321878-2577274.jpg" alt="#">
+                            </div>
+                            <div class="blog__content">
+                                <p class="blog__date">
+                                    March 6/2025 | UNCATEGORIZED
+                                </p>
+                                <h4 class="blog__name">
+                                    Pack wisely before travelling
+                                </h4>
+                                <p class="blog__text">
+                                    A wonderful serenity has taken possession of my entire soul, like
+                                    these sweet mornings of spring which I enjoy with my whole heart.
+                                </p>
+                            </div>
+                        </article>
+                    </a>
+
+                    <!--==================== BLOG ITEM 2 ====================-->
+                    <a href="#" class="blog__item" data-aos="zoom-in" data-aos-anchor-placement="center-bottom" data-aos-duration="1000">
+                        <article>
+                            <div class="blog__img">
+                                <img src="image/pexels-jplenio-1165991.jpg" alt="#">
+                            </div>
+                            <div class="blog__content">
+                                <p class="blog__date">
+                                    Jan 12/2025 | UNCATEGORIZED
+                                </p>
+                                <h4 class="blog__name">
+                                    Pack wisely before travelling
+                                </h4>
+                                <p class="blog__text">
+                                    A wonderful serenity has taken possession of my entire soul, like
+                                    these sweet mornings of spring which I enjoy with my whole heart.
+                                </p>
+                            </div>
+                        </article>
+                    </a>
+
+                </div>
+                <div class="btn__wrapper">
+                    <button class="btn btn__2 light">View All Blogs</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!--==================== BLOGS END ====================-->
+
+    <!--==================== FOOTER ====================-->
+    <footer id="footer">
+
+        <!-- FOOTER TOP -->
+        <div class="footer__top">
+            <div class="brand__info col">
+                <a href="#" class="footer__logo">
+                    WayfinderX
+                </a>
+                <p>Your ultimate guide to unforgettable journeys.
+                     Discover curated travel experiences, hidden gems, 
+                     and seamless adventures across India and beyond. Start exploring today!"</p>
+                <ul class="social__links">
+                    <li><a href="#"><i class="bx bxl-facebook"></i></a></li>
+                    <li><a href="#"><i class="bx bxl-twitter"></i></a></li>
+                    <li><a href="#"><i class="bx bxl-instagram"></i></a></li>
+                </ul>
+            </div>
+            <div class="col">
+                <h4>Address</h4>
+                <p>Phagwara, Punjab</p>
+                <p>P: +91 7079947006<br> WayfinderX@gmail.com</p>
+            </div>
+
+            <div class="col">
+                <h4>MORE INFO</h4>
+                <a href="#home">Home</a>
+                <a href="#destinations">Destinations</a>
+                <a href="#tours">Tours</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#blogs">Blogs</a>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer__bottom">
+            <p>Copyright ©2025 All rights reserved</p>
+        </div>
+
+    </footer>
+    <!--==================== FOOTER END ====================-->
+
+
+
+
+
+    <!--==================== JQUERY ====================-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+    <!--==================== OWL CAROUSEL ====================-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <!--==================== LIGHT GALLERY ====================-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/js/lightgallery.min.js"></script>
+    <script>
+        lightGallery(document.querySelector('.gallery__wrapper'), {
+            download: false,
+            share: false,
+        })
+    </script>
+
+    <!--==================== AOS ====================-->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+
+    <!--==================== JS ====================-->
+    <script src="script.js"></script>
+
+</body>
+
+</html>

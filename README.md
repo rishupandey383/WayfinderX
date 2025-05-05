@@ -4,23 +4,27 @@
 ---
 
 ## 🚀 **About WayfinderX**  
-A modern travel platform designed for explorers to discover destinations effortlessly. From personalized itineraries to smart bookings, WayfinderX transforms how you travel.  
+A modern travel platform designed for explorers, adventurers, and wanderers to discover destinations effortlessly. From personalized itineraries to smart bookings, WayfinderX transforms how you travel.  
 
 ---
 
 ## ✨ **Key Features**  
-✅ **Personalized Itineraries** - Tailored travel plans based on user preferences  
-✅ **Smart Booking System** - Easy reservations for flights and hotels  
-✅ **Interactive Maps & Guides** - Discover hidden gems with intuitive navigation  
-✅ **Community Travel Insights** - Share and explore real traveler experiences  
+| Feature | Description |  
+|---------|------------|  
+| **🧳 Personalized Itineraries** | AI-powered travel plans based on your preferences. |  
+| **✈️ Smart Booking System** | Seamless reservations for flights, hotels, and activities. |  
+| **🗺️ Interactive Maps & Guides** | Discover hidden gems with real-time navigation. |  
+| **🌐 Community Travel Insights** | Share experiences and explore traveler reviews. |  
 
 ---
 
-## 🛠️ **Technologies Used**  
-- **Frontend**: HTML5, CSS3, JavaScript  
-- **Mapping**: Google Maps API  
-- **Data Storage**: Local Storage / JSON  
-- **Travel Data**: Custom scrapers or open APIs  
+## 🛠️ **Tech Stack**  
+| Layer | Technology |  
+|-------|------------|  
+| **Frontend** | React, HTML5, CSS3, JavaScript |  
+| **Backend** | Node.js, Express |  
+| **Database** | MongoDB / Firebase |  
+| **APIs** | Google Maps, Skyscanner (or similar), Weather API |  
 
 ---
 
@@ -35,18 +39,28 @@ A modern travel platform designed for explorers to discover destinations effortl
 ![Screenshot 2025-04-10 103405](https://github.com/user-attachments/assets/d4ef67a0-c1ee-47a2-855e-0fbdd067481f)
 
 
-**Key Elements**:  
-- Destination search bar  
-- Featured travel packages  
-- User review section  
-- Mobile-responsive design  
+**Highlights:**  
+- Clean, responsive design  
+- Featured destinations section  
+- User testimonials  
+- Call-to-action for bookings  
 
 ---
 
 ## 🏁 **Getting Started**  
-1. Download the project files  
-2. Open `index.html` in your browser  
-3. For development:  
-   ```bash
-   # Run a local server (Python example)
-   python -m http.server 8000
+### Prerequisites  
+- Node.js (v16+)  
+- MongoDB Atlas (or local DB)  
+- API keys (Google Maps, Travel APIs)  
+
+### Installation  
+```bash
+# Clone the repo
+git clone https://github.com/yourusername/WayfinderX.git
+
+# Install dependencies
+cd WayfinderX
+npm install
+
+# Configure environment variables
+cp .env.example .env

@@ -3,699 +3,332 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WayfinderX | Login</title>
+    <title>WayfinderX | Auth</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* ===== Global Styles ===== */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
         body {
-    background: url(image/pexels-marek-piwnicki-3907296-31346449.jpg) no-repeat center center fixed;
-    background-size: cover;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    overflow-x: hidden;
-    position: relative;
-    color: #333;
-}
-
-body::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    backdrop-filter: blur(1px);
--webkit-backdrop-filter: blur(1px);
-border: 1px solid rgba(255,255,255,0.18);
-    z-index: -1;
-}
-
-        /* ===== Main Container ===== */
-        .container {
-            position: relative;
-            width: 100%;
-            max-width: 900px;
-            min-height: 600px;
-            background: white;
-            border-radius: 24px;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-            overflow: hidden;
+            background: url(image/pexels-marek-piwnicki-3907296-31346449.jpg);
+            min-height: 100vh;
             display: flex;
-            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
-
-        /* ===== Form Containers ===== */
-        .form-container {
-            position: absolute;
-            top: 0;
-            height: 100%;
-            width: 50%;
-            transition: all 0.7s cubic-bezier(0.645, 0.045, 0.355, 1);
-            padding: 60px;
-            display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
+            padding: 20px;
+        }
+
+        .auth-container {
             background: white;
-            z-index: 10;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 400px;
+            padding: 30px;
+            position: relative;
+            overflow: hidden;
         }
 
-        .login-container {
+        .auth-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
             left: 0;
-            z-index: 2;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(to right, #3a7bd5, #00d2ff);
         }
 
-        .sign-up-container {
-            left: 0;
-            opacity: 0;
-            z-index: 1;
-        }
-
-        /* ===== Form Elements ===== */
         h1 {
-            color: #2d3748;
-            font-size: 2.5rem;
-            margin-bottom: 24px;
+            color: #333;
             text-align: center;
-            font-weight: 700;
-            letter-spacing: -0.5px;
-            background: linear-gradient(to right, #667eea, #764ba2);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            position: relative;
+            margin-bottom: 25px;
+            font-size: 24px;
         }
 
-        h1::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 60px;
-            height: 4px;
-            background: linear-gradient(to right, #667eea, #764ba2);
-            border-radius: 2px;
-        }
-
-        .social-container {
-            margin: 24px 0;
-            display: flex;
-            gap: 16px;
-        }
-
-        .social-icon {
-            width: 56px;
-            height: 56px;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            font-size: 22px;
-            cursor: pointer;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .social-icon::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(255, 255, 255, 0.1);
-            transform: scale(0);
-            border-radius: 50%;
-            transition: transform 0.3s ease;
-        }
-
-        .social-icon:hover::before {
-            transform: scale(1);
-        }
-
-        .social-icon.facebook {
-            background: #1877f2;
-        }
-
-        .social-icon.google {
-            background: #ea4335;
-        }
-
-        .social-icon.linkedin {
-            background: #0077b5;
-        }
-
-        .social-icon:hover {
-            transform: translateY(-5px) scale(1.05);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-        }
-
-        .input-group {
-            width: 100%;
-            position: relative;
+        .form-group {
             margin-bottom: 20px;
         }
 
-        input {
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+            font-size: 14px;
+        }
+
+        .form-group input {
             width: 100%;
-            padding: 18px 20px;
-            margin: 8px 0;
-            border: 2px solid #e2e8f0;
-            border-radius: 12px;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 14px;
+            transition: border 0.3s;
+        }
+
+        .form-group input:focus {
+            border-color: #3a7bd5;
             outline: none;
-            font-size: 16px;
-            transition: all 0.3s ease;
-            background-color: #f8fafc;
         }
 
-        input:focus {
-            border-color: #667eea;
-            box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
-            background-color: white;
-        }
-
-        input::placeholder {
-            color: #94a3b8;
-            font-weight: 400;
-        }
-
-        button {
-            background: linear-gradient(to right, #667eea, #764ba2);
-            color: white;
+        .btn {
+            width: 100%;
+            padding: 12px;
+            background: linear-gradient(to right, #3a7bd5, #00d2ff);
             border: none;
-            padding: 18px 0;
-            border-radius: 12px;
+            border-radius: 6px;
+            color: white;
             font-size: 16px;
-            font-weight: 600;
             cursor: pointer;
-            margin-top: 24px;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
-            width: 100%;
-            position: relative;
-            overflow: hidden;
+            margin-top: 10px;
+            transition: opacity 0.3s;
         }
 
-        button::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(to right, rgba(255,255,255,0.1), rgba(255,255,255,0.3));
-            transform: translateX(-100%);
-            transition: transform 0.4s ease;
+        .btn:hover {
+            opacity: 0.9;
         }
 
-        button:hover::after {
-            transform: translateX(100%);
-        }
-
-        button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.6);
-        }
-
-        button:active {
-            transform: translateY(0);
-        }
-
-        .google-btn {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: white;
-            color: #5F6368;
-            border: 2px solid #e2e8f0;
-            padding: 16px;
-            border-radius: 12px;
-            font-size: 15px;
-            font-weight: 600;
-            cursor: pointer;
+        .switch-text {
+            text-align: center;
             margin-top: 20px;
-            transition: all 0.3s ease;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-            width: 100%;
-            position: relative;
-            overflow: hidden;
+            color: #666;
+            font-size: 14px;
         }
 
-        .google-btn:hover {
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            transform: translateY(-2px);
-            border-color: #cbd5e0;
-        }
-
-        .google-btn i {
-            margin-right: 12px;
-            color: #EA4335;
-            font-size: 20px;
+        .switch-text a {
+            color: #3a7bd5;
+            text-decoration: none;
+            font-weight: 500;
         }
 
         .divider {
             display: flex;
             align-items: center;
-            margin: 24px 0;
-            color: #94a3b8;
+            margin: 20px 0;
+            color: #999;
             font-size: 14px;
-            font-weight: 500;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
         }
 
         .divider::before, .divider::after {
             content: "";
             flex: 1;
-            border-bottom: 1px solid #e2e8f0;
-            margin: 0 12px;
+            border-bottom: 1px solid #eee;
+            margin: 0 10px;
         }
 
-        /* ===== Overlay ===== */
-        .overlay-container {
-            position: absolute;
-            top: 0;
-            left: 50%;
-            width: 50%;
-            height: 100%;
-            overflow: hidden;
-            transition: transform 0.7s cubic-bezier(0.645, 0.045, 0.355, 1);
-            z-index: 5;
-        }
-
-        .overlay {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            position: relative;
-            left: -100%;
-            height: 100%;
-            width: 200%;
-            transform: translateX(0);
-            transition: transform 0.7s cubic-bezier(0.645, 0.045, 0.355, 1);
-        }
-
-        .overlay-panel {
-            position: absolute;
-            top: 0;
+        .social-login {
             display: flex;
-            flex-direction: column;
             justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
             align-items: center;
-            padding: 0 60px;
-            height: 100%;
-            width: 50%;
-            text-align: center;
-            transform: translateX(0);
-            transition: transform 0.7s cubic-bezier(0.645, 0.045, 0.355, 1);
-        }
-
-        .overlay-left {
-            transform: translateX(-20%);
-        }
-
-        .overlay-right {
-            right: 0;
-            transform: translateX(0);
-        }
-
-        .overlay h1 {
+            justify-content: center;
             color: white;
-            background: transparent;
-            -webkit-text-fill-color: white;
+            font-size: 18px;
+            cursor: pointer;
+            transition: transform 0.3s;
         }
 
-        .overlay h1::after {
-            background: white;
-        }
-
-        .overlay p {
-            font-size: 16px;
-            margin: 24px 0 32px;
-            color: rgba(255, 255, 255, 0.9);
-            line-height: 1.6;
-            max-width: 300px;
-        }
-
-        .ghost {
-            background: transparent;
-            border: 2px solid white;
-            box-shadow: none;
-            transition: all 0.3s ease;
-        }
-
-        .ghost:hover {
-            background: rgba(255, 255, 255, 0.1);
+        .social-btn:hover {
             transform: translateY(-3px);
         }
 
-        /* ===== Animation Classes ===== */
-        .container.right-panel-active .login-container {
-            transform: translateX(100%);
+        .google { background: #DB4437; }
+        .facebook { background: #4267B2; }
+        .github { background: #333; }
+
+        .forgot-password {
+            text-align: right;
+            margin-top: -15px;
+            margin-bottom: 15px;
         }
 
-        .container.right-panel-active .sign-up-container {
-            transform: translateX(100%);
-            opacity: 1;
-            z-index: 10;
+        .forgot-password a {
+            color: #666;
+            font-size: 13px;
+            text-decoration: none;
         }
 
-        .container.right-panel-active .overlay-container {
-            transform: translateX(-100%);
+        .forgot-password a:hover {
+            text-decoration: underline;
         }
 
-        .container.right-panel-active .overlay {
-            transform: translateX(50%);
+        /* Animation for form switch */
+        .form-section {
+            transition: all 0.3s ease;
         }
 
-        .container.right-panel-active .overlay-left {
-            transform: translateX(0);
-        }
-
-        .container.right-panel-active .overlay-right {
-            transform: translateX(20%);
-        }
-
-        /* ===== Responsive Design ===== */
-        @media (max-width: 768px) {
-            .container {
-                flex-direction: column;
-                height: auto;
-                min-height: auto;
-                max-width: 500px;
-            }
-            
-            .form-container {
-                position: relative;
-                width: 100%;
-                height: auto;
-                padding: 50px 30px;
-                transform: none !important;
-                opacity: 1 !important;
-                display: none;
-            }
-            
-            .form-container.active {
-                display: flex;
-            }
-            
-            .overlay-container {
-                display: none;
-            }
-            
-            .mobile-toggle {
-                display: flex;
-                justify-content: center;
-                margin-top: 24px;
-            }
-            
-            .mobile-toggle button {
-                background: transparent;
-                border: none;
-                color: #667eea;
-                font-weight: 600;
-                text-decoration: none;
-                cursor: pointer;
-                padding: 8px;
-                font-size: 15px;
-                transition: all 0.3s ease;
-            }
-            
-            .mobile-toggle button:hover {
-                text-decoration: underline;
-            }
-            
-            h1 {
-                font-size: 2rem;
-            }
-            
-            .social-icon {
-                width: 50px;
-                height: 50px;
-                font-size: 20px;
-            }
-        }
-
-        /* ===== Floating Animation ===== */
-        @keyframes float {
-            0% { transform: translateY(0px) rotate(0deg); }
-            50% { transform: translateY(-12px) rotate(2deg); }
-            100% { transform: translateY(0px) rotate(0deg); }
-        }
-
-        .floating {
-            animation: float 4s ease-in-out infinite;
-            transform-origin: center bottom;
-        }
-
-        /* ===== Particles Background ===== */
-        .particles {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 0;
-            overflow: hidden;
-        }
-
-        .particle {
-            position: absolute;
-            background: rgba(255, 255, 255, 0.5);
-            border-radius: 50%;
-            filter: blur(1px);
-            animation: float-particle 15s linear infinite;
-        }
-
-        @keyframes float-particle {
-            0% {
-                transform: translateY(0) translateX(0);
-                opacity: 0;
-            }
-            10% {
-                opacity: 1;
-            }
-            90% {
-                opacity: 1;
-            }
-            100% {
-                transform: translateY(-1000px) translateX(200px);
-                opacity: 0;
-            }
+        .hidden {
+            display: none;
         }
     </style>
 </head>
 <body>
-    <div class="particles" id="particles"></div>
-    
-    <div class="container" id="container">
-        <!-- Sign Up Form -->
-        <div class="form-container sign-up-container">
-            <form action="#" method="post" autocomplete="off">
-                <h1 class="floating">Create Account</h1>
-                
-                <div class="social-container">
-                    <div class="social-icon facebook">
-                        <i class="fab fa-facebook-f"></i>
-                    </div>
-                    <div class="social-icon google">
-                        <i class="fab fa-google"></i>
-                    </div>
-                    <div class="social-icon linkedin">
-                        <i class="fab fa-linkedin-in"></i>
-                    </div>
-                </div>
-                
-                <div class="input-group">
-                    <input type="text" name="username" placeholder="Username" required />
-                </div>
-                <div class="input-group">
-                    <input type="email" name="email" placeholder="Email" required />
-                </div>
-                <div class="input-group">
-                    <input type="password" name="password" placeholder="Password" minlength="8" required />
-                </div>
-                
-                <button type="submit">Sign Up</button>
-                
-                <div class="divider">or</div>
-                
-                <button class="google-btn" type="button">
-                    <i class="fab fa-google"></i>
-                    Continue with Google
-                </button>
-                
-                <div class="mobile-toggle">
-                    <button id="mobileSignIn">Already have an account? <span>Sign In</span></button>
-                </div>
-            </form>
-        </div>
-
+    <div class="auth-container">
         <!-- Login Form -->
-        <div class="form-container login-container active">
-            <form action="#" method="post" autocomplete="off">
-                <h1 class="floating">Welcome Back</h1>
-                
-                <div class="social-container">
-                    <div class="social-icon facebook">
-                        <i class="fab fa-facebook-f"></i>
-                    </div>
-                    <div class="social-icon google">
-                        <i class="fab fa-google"></i>
-                    </div>
-                    <div class="social-icon linkedin">
-                        <i class="fab fa-linkedin-in"></i>
-                    </div>
+        <div class="form-section" id="login-form">
+            <h1>Welcome to WayfinderX</h1>
+            
+            <form id="login">
+                <div class="form-group">
+                    <label for="login-username">Username or Email</label>
+                    <input type="text" id="login-username" required>
                 </div>
                 
-                <div class="input-group">
-                    <input type="text" name="username" placeholder="Username" required />
-                </div>
-                <div class="input-group">
-                    <input type="password" name="password" placeholder="Password" required />
+                <div class="form-group">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" required>
                 </div>
                 
-                <div style="width: 100%; text-align: right; margin-top: -10px;">
-                    <a href="#" style="color: #667eea; font-size: 14px; text-decoration: none;">Forgot password?</a>
+                <div class="forgot-password">
+                    <a href="#">Forgot password?</a>
                 </div>
                 
-                <button type="submit">Sign In</button>
-                
-                <div class="divider">or</div>
-                
-                <button class="google-btn" type="button">
-                    <i class="fab fa-google"></i>
-                    Continue with Google
-                </button>
-                
+                <button type="submit" class="btn">Sign In</button>
             </form>
+            
+            <div class="divider">or continue with</div>
+            
+            <div class="social-login">
+                <div class="social-btn google">
+                    <i class="fab fa-google"></i>
+                </div>
+                <div class="social-btn facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </div>
+                <div class="social-btn github">
+                    <i class="fab fa-github"></i>
+                </div>
+            </div>
+            
+            <div class="switch-text">
+                Don't have an account? <a href="#" id="show-signup">Sign up</a>
+            </div>
         </div>
-
-        <!-- Overlay -->
-        <div class="overlay-container">
-            <div class="overlay">
-                <div class="overlay-panel overlay-left">
-                    <h1>Welcome Back!</h1>
-                    <p>Login with your personal info to continue your journey with us</p>
-                    <button class="ghost" id="signIn">Sign In</button>
+        
+        <!-- Signup Form -->
+        <div class="form-section hidden" id="signup-form">
+            <h1>Create Account</h1>
+            
+            <form id="signup">
+                <div class="form-group">
+                    <label for="signup-username">Username</label>
+                    <input type="text" id="signup-username" required>
                 </div>
-                <div class="overlay-panel overlay-right">
-                    <h1>Hello, Friend!</h1>
-                    <p>Enter your personal details and start your adventure with our community</p>
-                    <button class="ghost" id="signUp">Sign Up</button>
+                
+                <div class="form-group">
+                    <label for="signup-email">Email</label>
+                    <input type="email" id="signup-email" required>
                 </div>
+                
+                <div class="form-group">
+                    <label for="signup-password">Password</label>
+                    <input type="password" id="signup-password" minlength="8" required>
+                </div>
+                
+                <button type="submit" class="btn">Sign Up</button>
+            </form>
+            
+            <div class="divider">or sign up with</div>
+            
+            <div class="social-login">
+                <div class="social-btn google">
+                    <i class="fab fa-google"></i>
+                </div>
+                <div class="social-btn facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </div>
+                <div class="social-btn github">
+                    <i class="fab fa-github"></i>
+                </div>
+            </div>
+            
+            <div class="switch-text">
+                Already have an account? <a href="#" id="show-login">Sign in</a>
             </div>
         </div>
     </div>
 
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const signUpButton = document.getElementById('signUp');
-            const signInButton = document.getElementById('signIn');
-            const mobileSignUp = document.getElementById('mobileSignUp');
-            const mobileSignIn = document.getElementById('mobileSignIn');
-            const container = document.getElementById('container');
-            const loginForm = document.querySelector('.login-container');
-            const signupForm = document.querySelector('.sign-up-container');
+        document.addEventListener('DOMContentLoaded', function() {
+            const loginForm = document.getElementById('login-form');
+            const signupForm = document.getElementById('signup-form');
+            const showLogin = document.getElementById('show-login');
+            const showSignup = document.getElementById('show-signup');
             
-            // Create particles
-            const particlesContainer = document.getElementById('particles');
-            for (let i = 0; i < 30; i++) {
-                const particle = document.createElement('div');
-                particle.classList.add('particle');
-                particle.style.width = `${Math.random() * 10 + 5}px`;
-                particle.style.height = particle.style.width;
-                particle.style.left = `${Math.random() * 100}%`;
-                particle.style.bottom = `-${Math.random() * 100}px`;
-                particle.style.animationDuration = `${Math.random() * 20 + 10}s`;
-                particle.style.animationDelay = `${Math.random() * 5}s`;
-                particlesContainer.appendChild(particle);
-            }
-            
-            // Desktop toggle
-            signUpButton.addEventListener('click', () => {
-                container.classList.add('right-panel-active');
-            });
-
-            signInButton.addEventListener('click', () => {
-                container.classList.remove('right-panel-active');
+            // Toggle between forms
+            showSignup.addEventListener('click', function(e) {
+                e.preventDefault();
+                loginForm.classList.add('hidden');
+                signupForm.classList.remove('hidden');
             });
             
-            // Mobile toggle
-            mobileSignUp.addEventListener('click', () => {
-                loginForm.classList.remove('active');
-                signupForm.classList.add('active');
-                window.scrollTo(0, 0);
+            showLogin.addEventListener('click', function(e) {
+                e.preventDefault();
+                signupForm.classList.add('hidden');
+                loginForm.classList.remove('hidden');
             });
             
-            mobileSignIn.addEventListener('click', () => {
-                signupForm.classList.remove('active');
-                loginForm.classList.add('active');
-                window.scrollTo(0, 0);
+            // Form submissions
+            document.getElementById('login').addEventListener('submit', function(e) {
+                e.preventDefault();
+                const btn = this.querySelector('button[type="submit"]');
+                const originalText = btn.textContent;
+                
+                btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Signing in...';
+                
+                // Simulate API call
+                setTimeout(() => {
+                    alert('Login successful!');
+                    btn.textContent = originalText;
+                }, 1500);
             });
-
-            // Google button click
-            const googleButtons = document.querySelectorAll('.google-btn');
-            googleButtons.forEach(btn => {
-                btn.addEventListener('click', () => {
-                    const originalHTML = btn.innerHTML;
-                    btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Redirecting...';
-                    btn.disabled = true;
+            
+            document.getElementById('signup').addEventListener('submit', function(e) {
+                e.preventDefault();
+                const btn = this.querySelector('button[type="submit"]');
+                const originalText = btn.textContent;
+                
+                btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Creating account...';
+                
+                // Simulate API call
+                setTimeout(() => {
+                    alert('Account created successfully!');
+                    btn.textContent = originalText;
+                    signupForm.classList.add('hidden');
+                    loginForm.classList.remove('hidden');
+                }, 1500);
+            });
+            
+            // Social buttons
+            document.querySelectorAll('.social-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const platform = this.classList.contains('google') ? 'Google' : 
+                                    this.classList.contains('facebook') ? 'Facebook' : 'GitHub';
                     
+                    const icon = this.querySelector('i');
+                    const originalClass = icon.className;
+                    
+                    icon.className = 'fas fa-spinner fa-spin';
+                    
+                    // Simulate social login
                     setTimeout(() => {
-                        // Simulate API call
-                        console.log('Redirecting to Google OAuth');
-                        // In a real app, you would redirect to Google OAuth here
-                        
-                        // Reset button after delay
-                        btn.innerHTML = originalHTML;
-                        btn.disabled = false;
-                    }, 1500);
+                        alert(`Redirecting to ${platform} login...`);
+                        icon.className = originalClass;
+                    }, 1000);
                 });
             });
-            
-            // Form submission
-            const forms = document.querySelectorAll('form');
-            forms.forEach(form => {
-                form.addEventListener('submit', (e) => {
-                    e.preventDefault();
-                    const submitBtn = form.querySelector('button[type="submit"]');
-                    const originalText = submitBtn.textContent;
-                    
-                    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Processing...';
-                    submitBtn.disabled = true;
-                    
-                    // Simulate API call
-                    setTimeout(() => {
-                        alert('Form submitted successfully!');
-                        submitBtn.textContent = originalText;
-                        submitBtn.disabled = false;
-                    }, 2000);
-                });
-            });
-            
-            // Handle window resize
-            function handleResize() {
-                if (window.innerWidth <= 768) {
-                    container.classList.remove('right-panel-active');
-                }
-            }
-            
-            window.addEventListener('resize', handleResize);
-            handleResize(); // Initial check
         });
     </script>
 </body>

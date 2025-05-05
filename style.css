@@ -468,13 +468,13 @@ header{
     background-repeat: no-repeat;
 }
 .home__slide.slide__1{
-    background-image: url(image/pexels-aryalprakash-38326.jpg);
+    background-image: url(image/himalayas.jpg);
 }
 .home__slide.slide__2{
     background-image: url(image/pexels-maahidphotos-3881104.jpg);
 }
 .home__slide.slide__3{
-    background-image: url(image/pexels-shubhendu-singh-1278012-2439787.jpg);
+    background-image: url(image/kashmir.jpg);
 }
 .overlay{
     position: absolute;
